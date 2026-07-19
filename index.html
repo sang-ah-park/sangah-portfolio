@@ -154,20 +154,6 @@
   }
   .hero .eyebrow::before{ content:'// '; color:var(--ink-faint); }
 
-  .site-link{
-    display:none;
-    align-items:center;
-    gap:6px;
-    margin-bottom:18px;
-    font-family:var(--mono);
-    font-size:12px;
-    color:var(--warm);
-    text-decoration:none;
-    border-bottom:1px solid var(--warm);
-    padding-bottom:1px;
-  }
-  .site-link:hover{ opacity:.75; }
-
   .chatframe{
     border:1px solid var(--line-strong);
     background:var(--surface);
@@ -649,7 +635,6 @@
     }
     .topnav{ display:none !important; }
     .reveal{ opacity:1 !important; transform:none !important; }
-    .site-link{ display:inline-flex !important; }
 
     /* show all 3 projects stacked instead of the on-screen carousel */
     .project-carousel-track{
@@ -678,8 +663,7 @@
     .tl-item,
     .tcard,
     .skills,
-    .chatframe,
-    .site-link{
+    .chatframe{
       page-break-inside:avoid;
       break-inside:avoid;
     }
@@ -715,7 +699,6 @@
 </nav>
 
 <header class="hero wrap">
-  <a class="site-link" href="https://sang-ah-park.github.io/sangah-portfolio/" target="_blank" rel="noopener">🔗 sang-ah-park.github.io/sangah-portfolio</a>
   <div class="eyebrow">AI Product Manager</div>
   <div class="chatframe">
     <div class="frame-head">
