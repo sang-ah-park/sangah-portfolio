@@ -144,6 +144,20 @@
   }
   .hero .eyebrow::before{ content:'// '; color:var(--ink-faint); }
 
+  .site-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-bottom:18px;
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--warm);
+    text-decoration:none;
+    border-bottom:1px solid var(--warm);
+    padding-bottom:1px;
+  }
+  .site-link:hover{ opacity:.75; }
+
   .chatframe{
     border:1px solid var(--line-strong);
     background:var(--surface);
@@ -654,14 +668,34 @@
       max-width:100% !important;
       width:100% !important;
       margin-bottom:40px !important;
-      page-break-inside:avoid;
-      break-inside:avoid;
     }
     .project-carousel-controls{ display:none !important; }
 
     /* per-project image carousel: just show the first image, hide controls */
     .carousel-track{ transform:none !important; }
     .carousel-btn, .carousel-dots{ display:none !important; }
+
+    /* keep each self-contained block from splitting mid-way across a page break */
+    .pblock,
+    .project-media,
+    .project-head,
+    .metric-row,
+    .tl-item,
+    .tcard,
+    .skills,
+    .chatframe,
+    .site-link{
+      page-break-inside:avoid;
+      break-inside:avoid;
+    }
+
+    /* keep a heading glued to the content that follows it */
+    .sec-head,
+    .pblock-label,
+    .sub-head{
+      page-break-after:avoid;
+      break-after:avoid;
+    }
   }
 </style>
 </head>
@@ -686,6 +720,7 @@
 </nav>
 
 <header class="hero wrap">
+  <a class="site-link" href="https://sang-ah-park.github.io/sangah-portfolio/" target="_blank" rel="noopener">🔗 sang-ah-park.github.io/sangah-portfolio</a>
   <div class="eyebrow">AI Product Manager</div>
   <div class="chatframe">
     <div class="frame-head">
