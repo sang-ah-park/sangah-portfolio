@@ -632,6 +632,37 @@
     *{ animation:none !important; transition:none !important; }
     .reveal{ opacity:1; transform:none; }
   }
+
+  @media print{
+    *{
+      -webkit-print-color-adjust:exact !important;
+      print-color-adjust:exact !important;
+      animation:none !important;
+      transition:none !important;
+    }
+    .topnav{ display:none !important; }
+    .reveal{ opacity:1 !important; transform:none !important; }
+
+    /* show all 3 projects stacked instead of the on-screen carousel */
+    .project-carousel-viewport{ height:auto !important; overflow:visible !important; }
+    .project-carousel-track{
+      display:block !important;
+      transform:none !important;
+    }
+    .project-carousel-track .project{
+      flex:none !important;
+      max-width:100% !important;
+      width:100% !important;
+      margin-bottom:40px !important;
+      page-break-inside:avoid;
+      break-inside:avoid;
+    }
+    .project-carousel-controls{ display:none !important; }
+
+    /* per-project image carousel: just show the first image, hide controls */
+    .carousel-track{ transform:none !important; }
+    .carousel-btn, .carousel-dots{ display:none !important; }
+  }
 </style>
 </head>
 <body>
